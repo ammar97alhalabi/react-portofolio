@@ -1,0 +1,90 @@
+
+.contact-page{
+    
+    .text-zone{
+        transition: all 1s ease-in;
+        position: absolute;
+        animation: slide2 1.5s backwards;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25%;
+        left: 26%;
+        // vertical-align: middle;
+        display: block;
+        max-height: 90%;
+        &::before{
+            content: '<contact>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            color: #ffd700;
+            position: fixed;
+            margin-top: -60px;
+            left: -10px;
+            opacity: 0.4;
+            line-height: 18px;
+
+        }
+        &::after{
+            content: '</contact>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+
+            color: #ffd700;
+            position: fixed;
+            // margin-top: 50px;
+            
+            bottom: -50px;
+            left: 0px;
+            opacity: 0.4;
+            line-height: 18px;
+
+        }
+        @keyframes slide2 {
+            50% {
+                left: 25%; top: -100%; 
+            }
+        }
+        @keyframes slide1 {
+            50% {
+                
+            left: 25%; top: -100%; 
+            }
+        }    
+
+        h1{
+            filter: drop-shadow(0px 0px 40px #ffd700);
+            font-size: 53px;
+            font-family: 'Coolvetica';
+            color: #ffd700;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 40px;
+            left: 10px;
+         
+
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            li{
+                list-style: none;
+                a{
+                    padding-right: 40px;
+                    display: flex;
+                    font-size: 50px;
+                    line-height: 16px;
+        
+                    transition: ease-in all 0.5s ;
+                    &:hover svg{
+                        font-size: 55px;
+                        transition: ease-out all 0.5s ;
+                        filter: drop-shadow(0px 0px 5px white);
+                        color: #ffd700;
+                        
+                    }
+                }
+            }
+        }
+                
+        }
+    }

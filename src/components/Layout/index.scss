@@ -1,0 +1,132 @@
+.page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    div > img{
+        animation: fadeIn 3s ;
+        transition: all 5s ease-in-out;
+        filter: brightness(0.7) hue-rotate(75deg) saturate(1) drop-shadow(0px 0px 100px aqua);
+        fill: aqua;
+        width: 900px;
+        transform: rotate(10deg);
+        height: 900px;
+        position: absolute;
+        top: -20%;
+        left: 60%;
+        // -webkit-animation: Ashadow 10s infinite;
+        // animation: slide 20s infinite;
+      
+        // &:hover{
+        //     top: 20%;
+        //     width: 600px;
+        //     height: 600px;
+        //     transform: rotate(90deg);
+        //     left: 60%;
+        //     transition: all 5s ease-in-out;
+        //     filter: brightness(0.7) hue-rotate(75deg) saturate(1) drop-shadow(0px 0px 150px purple);
+        
+        // }
+        
+        @keyframes Ashadow {
+            50% {
+                transition: all 5s ease-in-out;
+                filter: drop-shadow(0px 0px 150px purple);
+            }
+        }
+        @keyframes slide {
+            50% {transform: rotate(90deg);
+                left: 55%; top: 2.5%; width: 600px;height: 600px; filter: brightness(0.7) hue-rotate(75deg) saturate(1) drop-shadow(0px 0px 150px purple);
+            }
+        }
+    }
+}
+
+.top-tags{
+    bottom: auto;
+    top: 35px;
+}
+
+.tags{
+
+    filter: drop-shadow(0px 0px 15px white);
+    color: #ffd700;
+    opacity: 0.4;
+    position: absolute;
+    bottom: 3%;
+    left: 20%;
+    font-size: 20px;
+    font-family: 'La Belle Aurore' ;
+}
+
+.bottom-tag-html{
+    margin-left: -120%;
+
+}
+.container {
+    width: 100%;
+    will-change: contents;
+    height: 90%;
+    min-height: 566px;
+    position: absolute;
+    opacity: 0;
+    top: 5%;
+    margin: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+
+}
+
+// .about-page{
+//     .text-zone{
+//         position: absolute;
+//         left: 10%;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         width: 35%;
+//         vertical-align: middle;
+//         display: table-cell;
+//         max-height: 90%;
+
+//         h1{
+//             font-size: 53px;
+//             font-family: 'Coolvetica';
+//             color: #ffd700;
+//             font-weight: 400;
+//             margin-top: 0;
+//             margin-bottom: 40px;
+//             left: 10px;
+
+//             &::before{
+//                 content: '<h1>';
+//                 font-family: 'La Belle Aurore';
+//                 font-size: 18px;
+//                 position: absolute;
+//                 margin-top: -10px;
+//                 left: -10px;
+//                 opacity: 0.6;
+//                 line-height: 18px;
+
+//             }
+//             &::after{
+//                 content: '</h1>';
+//                 font-family: 'La Belle Aurore';
+//                 font-size: 18px;
+//                 position: absolute;
+//                 margin-top: -10px;
+//                 margin-left: 20px;
+//                 bottom: -20px;
+//                 left: -30px;
+//                 opacity: 0.6;
+//                 line-height: 18px;
+
+//             }
+
+//         }
+//         p{
+//             font-size: 13px;
+//             color: white;
+//         }
+//     }
+// }
