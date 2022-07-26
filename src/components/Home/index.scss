@@ -1,0 +1,95 @@
+.home-page{
+    .text-zone{
+        position: absolute;
+        left: 25%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 71%;
+        max-height: 90%;
+        animation: slide2 1.5s forwards;
+        transition: all 1s ease-in;
+    }
+
+    h1{
+        color: white;
+        font-size: 50px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+        
+
+        &::before{
+            content: '<Ammar-Alhalabi>';
+            filter: drop-shadow(0px 0px 15px white);
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+
+            font-size: 20px;
+            position: absolute;
+            margin-top: -40px;
+            animation: fadeIn 1s 2.5s backwards;
+            
+            left: 0px;
+            opacity: 0.4;
+        }
+        &::after{
+            content: '</Ammar-Alhalabi>';
+            filter: drop-shadow(0px 0px 15px white);
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: 20px;
+            position: absolute;
+            margin-top: 220px;
+            left: 0px;
+            animation: fadeIn 1s 2.5s backwards;
+            opacity: 0.4;
+        }
+        
+        img{
+            border: #181818;
+            border-width: 0px;
+            border-style:solid ;
+            filter: brightness(7) hue-rotate(75deg) saturate(10) drop-shadow(0px 0px 30px #ffd700);
+            lighting-color: #ffd700;
+            width: 60px;
+            margin-left: 20px;
+            opacity: 0;
+            height: 60px;
+            animation: bounceIn 1s linear both;
+            animation-delay: 1.5s;
+            
+            
+            
+        }   
+    }
+    h2{
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 11px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+    .flat-button{
+        color: #ffd700;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #ffd700;
+        margin-top: 25px;
+        transition:ease-in all 0.5s ;
+        float: left;
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+        &:hover{
+            transition:ease-in all 0.5s ;
+            animation: fadeIn 1s 0s forwards;
+            background-color: #ffd700;
+            color: #181818;
+        }
+    }
+}
