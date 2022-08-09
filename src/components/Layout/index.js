@@ -8,7 +8,7 @@ const Layout =()=>{
         <div className='page'>
             <span className='tags top-tags'>&lt;body&gt;</span>
             <div>
-            <img src={LogoTitle} alt=''></img>
+            <img className='back' src={LogoTitle} alt=''></img>
             </div> 
                 
             <Outlet></Outlet>

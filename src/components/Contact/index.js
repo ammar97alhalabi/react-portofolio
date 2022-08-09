@@ -1,12 +1,30 @@
 import './index.scss';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { useState, useEffect } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
 import '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import { Link ,NavLink} from 'react-router-dom'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+// import { Link ,NavLink} from 'react-router-dom'
+import Loader from 'react-loaders';
 const Contact =()=>{
-    
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_u4gbymh', 'template_2y88ren', form.current, 'AWQkLP3epqss1yWX5')
+        .then((result) => {
+            alert(result.text);
+            window.location.reload(false);
+        }, (error) => {
+            alert(error.text);
+
+            // window.location.reload(true);
+        });
+    };
+  
         const [letterClass, setLetterClass] = useState('text-animate')
 
         useEffect(() => {
@@ -15,34 +33,35 @@ const Contact =()=>{
         },4000);
         },[])
         return (
-            <div className='container contact-page'>
+            <><div className='container contact-page'>
                 <div className='text-zone'>
                     <h1>
-                        <AnimatedLetters strArray={['C','o','n','t','a','c','t',' ','M','e'] }idx={17} letterClass={letterClass} />
+                        <AnimatedLetters strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'M', 'e']} idx={17} letterClass={letterClass} />
                     </h1>
+                    <form ref={form} className='contact-form' onSubmit={sendEmail}>
                     <ul>
-                        <li>
-                            <a target="_blank" rel='noreferrer' href='https://www.Facebook.com'>
-                            <FontAwesomeIcon icon={faFacebookF} color="#4d4d4e"></FontAwesomeIcon>
-                            </a>
+                        <li className='half'>
+                            <input type={'text'} name='name' placeholder='Name' required></input>
+                        </li>
+                        <li className='half'>
+                            <input type={'email'} name='email' placeholder='Email' required></input>
                         </li>
                         <li>
-
-                            <a target="_blank" rel='noreferrer' href='https://www.github.com'>
-                            <FontAwesomeIcon icon={faGithub} color="#4d4d4e"></FontAwesomeIcon>
-                            </a>
+                            <input type={'text'} name='subject' placeholder='Subject' required></input>
                         </li>
                         <li>
-                            <a target="_blank" rel='noreferrer' href='https://www.Linkedin.com'>
-                            <FontAwesomeIcon icon={faLinkedinIn} color="#4d4d4e"></FontAwesomeIcon>
-                            </a>
+                            <textarea placeholder='Message' name='message' required></textarea>
+                        </li>
+                        <li>
+                            <input type={'submit'} className='flat-button' value={'SEND'} ></input>
                         </li>
                     </ul>
-                    
+                    </form>
                 </div>
-            </div>
+            </div><Loader type='ball-scale-ripple-multiple'/></>
         )
         
     
 }
 export default Contact
+
