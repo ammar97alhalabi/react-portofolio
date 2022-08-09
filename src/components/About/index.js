@@ -1,6 +1,7 @@
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import {useState,useEffect} from 'react'
+import Loader from 'react-loaders'
 const About =()=>{
     const [letterClass, setLetterClass] = useState('text-animate')
 
@@ -10,10 +11,10 @@ const About =()=>{
     },4000);
     },[])
     return (
-        <div className='container about-page'>
+        <><div className='container about-page'>
             <div className='text-zone'>
                 <h1>
-                    <AnimatedLetters strArray={['A','b','o','u','t',' ','M','e'] }idx={17} letterClass={letterClass} />
+                    <AnimatedLetters strArray={['A', 'b', 'o', 'u', 't', ' ', 'M', 'e']} idx={17} letterClass={letterClass} />
                 </h1>
                 <p>
                     I'm very ambitious software engineer looking for a role in established IT company
@@ -24,10 +25,10 @@ const About =()=>{
                     one problem at a time.
                 </p>
                 <p>
-                    If I need to define myself in one sentence that would be a family person, a sports fanatic , and tech-obsessed!!! 
+                    If I need to define myself in one sentence that would be a family person, a sports fanatic, and tech-obsessed!!!
                 </p>
             </div>
-        </div>
+        </div><Loader type='ball-scale-ripple-multiple' /></>
     )
     
 }

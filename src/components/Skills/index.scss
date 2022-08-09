@@ -1,0 +1,141 @@
+
+.skills-page{
+    
+    .text-zone{
+        transition: all 1s ease-in;
+        position: absolute;
+        animation: slide2 1.5s backwards;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        left: 25%;
+        // vertical-align: middle;
+        display: block;
+        max-height: 90%;
+        &::before{
+            content: '<skills>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+            color: #ffd700;
+            position: absolute;
+            margin-top: 0px;
+            left: -10px;
+            opacity: 0.4;
+            line-height: 18px;
+
+        }
+        &::after{
+            content: '</skills>';
+            font-family: 'La Belle Aurore';
+            font-size: 18px;
+
+            color: #ffd700;
+            position: absolute;
+            // margin-top: 50px;
+            
+            bottom: -10px;
+            left: 0px;
+            opacity: 0.4;
+            line-height: 18px;
+
+        }
+        @keyframes slide2 {
+            50% {
+                left: 25%; top: -100%; 
+            }
+        }
+        @keyframes slide1 {
+            50% {
+                
+            left: 25%; top: -100%; 
+            }
+        }    
+
+        h1{
+            filter: drop-shadow(0px 0px 40px #ffd700);
+            font-size: 53px;
+            font-family: 'Coolvetica';
+            color: #ffd700;
+            font-weight: 400;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            left: 10px;
+         
+
+        }
+        ul{
+            
+            display: table-row;
+            list-style: none;
+            li{ 
+                left: 100px;
+                display: table-cell;
+                img{ 
+                    text-decoration: none;
+                    
+                    // border: 2px solid ;
+                    // border-image: repeat;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    text-decoration: none;
+
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0.6;
+                    transition: all 0.5s ease-out;
+                    &:hover{
+                        transition: all 0.5s ease-in;
+                        filter: drop-shadow(0px 0px 40px white);
+                        width: 200px;
+                        height: 200px;
+                        opacity: 1;
+                    }
+
+
+                }
+            }
+        }
+        p{
+            font-size: 12px;
+            margin-bottom: 30px;
+            color: white;
+            opacity: 0.2;
+            // width: 50%;
+            // text-align: justify;
+            // text-align-last: justify;
+            transition: all 0.5s ease-out;
+            &:hover{
+                opacity: 1;
+                transition: all 0.5s ease-in;
+                font-size: 18px;
+                filter: drop-shadow(0px 0px 50px white);
+            }
+            &::before{
+                content: '<p>';
+                font-family: 'La Belle Aurore';
+                font-size: 18px;
+                position: absolute;
+
+                margin-top: 0px;
+                left: -30px;
+                opacity: 0.6;
+                line-height: 18px;
+
+            }
+            &::after{
+                width: 1%;
+                content: '</p>';
+                font-family: 'La Belle Aurore';
+                font-size: 18px;
+                position: absolute;
+                
+                margin-top: 10px;
+                
+                right: 10px;
+                opacity: 0.6;
+                line-height: 18px;
+
+            }
+        }
+    }
+}
