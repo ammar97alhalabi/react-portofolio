@@ -26,6 +26,18 @@ const Skills=()=>{
                 <h1>
                     <AnimatedLetters strArray={['M', 'y', ' ', 'S', 'k', 'i', 'l', 'l', 's']} idx={17} letterClass={letterClass} />
                 </h1>
+                <p>
+                Frontend <br/>
+                React.js | Javascript | HTML | Sass
+
+                <br/>
+                Mobile<br/>
+                Flutter | Android Native
+
+                Backend <br/>
+                Laravel | Flask | Django
+                </p>
+                
                 <div>
                     <ul>
                         <li>
