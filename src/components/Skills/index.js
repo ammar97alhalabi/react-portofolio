@@ -29,18 +29,15 @@ const Skills=()=>{
                 <p>
                 Frontend <br/>
                 React.js | Javascript | HTML | Sass
-
-                <br/>
-                <br/>
+                </p>
+                <p>
                 Mobile<br/>
                 Flutter | Android Native
-
-                <br/>
-                <br/>
+                </p>
+                <p>
                 Backend <br/>
                 Laravel | Flask | Django
                 </p>
-                
                 <div>
                     <ul>
                         <li>
