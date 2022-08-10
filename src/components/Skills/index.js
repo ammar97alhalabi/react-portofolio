@@ -8,7 +8,7 @@ import { useState,useEffect } from 'react'
 // import h4 from '../../assets/images/Skills/logo1.png'
 // import h5 from '../../assets/images/Skills/logo2.png'
 // import h6 from '../../assets/images/Skills/logo3.png'
-import h7 from '../../assets/images/Skills/python-logo.svg'
+// import h7 from '../../assets/images/Skills/python-logo.svg'
 // import h8 from '../../assets/images/Skills/'
 // import h9 from '../../assets/images/Skills/'
 
